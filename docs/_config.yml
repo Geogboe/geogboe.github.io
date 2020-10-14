@@ -1,0 +1,52 @@
+# Site settings
+title: All Things Automation
+email: geogboe@users.noreply.github.com
+description: >-
+  Scripting | PowerShell | Python | Automation | DevOps |
+  Systems Administration | Go | Azure | Cloud | CI |
+  [Insert other trendy buzzwords here]...
+url: 'https://geogboe.github.io'
+
+# Note - this theme doesn't work with base url like '/'
+baseurl: ''
+# disable_landing_page: true
+
+author:
+  name: George Bowen
+  twitter_username: georgesayswhat
+  github_username:  geogboe
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+plugins:
+  - jekyll-paginate
+
+exclude:
+  - 'README.md'
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - 'screenshot.png'
+  - '*.sh'
